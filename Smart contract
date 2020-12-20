@@ -1,0 +1,24 @@
+pragma solidity 0.4.16 <= 0.6.12;
+
+contract Electricitybills 
+{ string name;
+  string addr;
+  int unit;
+  int money;
+  string consumerid;
+ 
+   function Electricitybills (string newname, string  newaddr, int newunit, int newmoney, string newid)
+   {
+       name = newname;
+       addr = newaddr;
+       unit = newunit;
+       money = newmoney;
+       consumerid = newid;
+   }
+  
+  function geElecticitybill() public view returns( string, string, int, int, string)
+  {
+      return (name, addr, unit, money,consumerid);
+  }
+
+}
